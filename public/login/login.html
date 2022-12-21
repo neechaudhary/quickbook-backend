@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+        
+            <div class="image_container">
+                
+            </div>
+            <div class="log_details">
+                <div class="log_label">
+                <h1>USER LOGIN</h1>
+                <P>WELCOME</P>
+            </div>
+            <div class="field_btn">
+                <form action="/api/login/login" method="post">
+                    <div>
+                        <label for="email">Email</label><br>
+                        <input type="text" name="login_email"><br>
+                    </div>
+                    <div>
+                        <label for="password">Password</label><br>
+                        <input type="password" name="login_password"><br> 
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Login</button><br>
+                        <p>Create account? <a href="">click here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

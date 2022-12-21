@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_container{
+    width: 47%;
+    height: 90vh;
+    background-image: url(./woman-cashier-with-cash-register-counter-desk-cartoon_75802-370.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.log_details{
+    width:40%;
+    height: 90vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.log_details .log_label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: rgb(65, 65, 65);
+    padding: 45px;
+    font-family: 'popins', 'sans-serif';
+}
+.log_details .log_label p{
+    font-size: 13px;
+   
+}
+.field_btn div{
+  margin: 10px 0;
+}
+
+.field_btn form{
+ 
+    font-family: 'popins', 'sans-serif';
+}
+.field_btn label{
+    font-weight: 600;
+    color: #424242;
+     
+}
+.field_btn input{
+    width: 110%;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid #252525;
+    outline: none;
+    margin: 0px 0px 10px 0;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    color: #424242;
+}
+.btn button{
+    width: 80%;
+    height: 40px;
+    border: none;
+    margin-top: 20px;
+    outline: none;
+    background-color: #013047;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'popins', 'sans-serif';
+    cursor: pointer;
+}
+.btn >p >a{
+    text-decoration: none;
+    color: #013047;
+    font-weight: 600;
+    font-family: 'popins', 'sans-serif';
+}
+@media (min-width:320px) and (max-width:420px){
+    
+}

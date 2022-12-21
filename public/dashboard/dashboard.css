@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dashboard{
+    width: auto;
+    background-color: white;
+    padding: 20px;
+}
+.all_dashboard_cont{
+    /* background-color: rgb(235, 235, 235); */
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    background-color: rgb(196, 214, 231);
+}
+.all_dashboard_cont h1{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-family: 'poppins', sans-serif;
+}
+.dashboard_top{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 10px 20px 10px;
+}
+.top_div1{
+    width: 17%;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px 10px 5px 10px;
+    padding: 10px 0 10px 5px;
+    font-family: 'poppins', sans-serif;
+  
+}
+.top_div1 p{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+.top_div1 span select{
+    border: none;
+    outline: none;
+}
+.top_div1 span select option{
+    background-color: aliceblue;
+    
+}
+.cards{
+    width: 100%;
+    display: grid;
+    padding: 10px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: 'popins', sans-serif;
+    column-gap: 20px;
+}
+.card_details p{
+    color: black;
+    margin: 10px 0;
+}
+.card_details{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    font-family: 'poppins', sans-serif;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+.dash_bottom{
+    display:flex;
+    justify-content: space-between;
+}
+.table{
+    margin-top: 10px;
+    width: 70%;
+   
+}
+.table h1{
+    padding: 10px;
+    font-family: 'popins', sans-serif;
+    font-size: 20px;
+    display: flex;
+    color: initial;
+    justify-content: space-between;
+}
+.dash_records{
+    list-style-type: none;
+    padding: 10px;
+
+}
+.dash_table_header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+    background-color: #d0cfcf;
+    font-family: 'popins', sans-serif;
+    font-weight: 600;
+    color: #252525;
+}
+.dash_table_details{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family: 'popins', sans-serif;
+   border: 1px solid #d0cfcf;
+   box-shadow:rgb(20 30 40 / 50%) 0px 4px 10px 0px;
+    color: #252525;
+}
+.image_here{
+    width:30%;
+    margin-top: 20px;
+
+}
+.image_here img{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+}
+
+
+
