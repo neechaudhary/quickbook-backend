@@ -2,10 +2,6 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const path= require("path")
-const User = require("./models/users");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-
 
 function root(page){
     const static_path = path.join(__dirname, `./public/${page}`);
