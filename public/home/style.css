@@ -88,7 +88,8 @@ background-color: #013047;
 .nav_button li a{
     list-style: none;
     text-decoration: none;
-    padding: 15px;
+    /* padding: 15px; */
+    padding: 15px 0 15px 15px;
     color: white;
   
 
@@ -156,4 +157,50 @@ background-color: #013047;
 }
 .pay_status_details{
     font-weight: 500;
+}
+.nav_button_top{
+    display: none;
+}
+
+/*responsiveness*/
+@media (min-width:320px) and (max-width:482px){
+    .all_nav_items{
+       
+        /* width: 250px; */
+        /* position: absolute ;
+        top: 0;
+        left: 0; */
+    }
+    .active{
+        width: 250px;
+        position: absolute ;
+        top: 0;
+        left: 0;
+    }
+    .hidden{
+ display: none;
+    }
+    .nav_button_top{
+        display: block;
+    }
+}
+@media (min-width:483px) and (max-width:769px){
+    .all_nav_items{
+        display: none;
+    }
+    .nav_button_top{
+        display: block;
+    }
+    .active{
+        width: 250px;
+                position: absolute ;
+                top: 0;
+                left: 0;
+            }
+            .hidden{
+         display: none;
+            }
+            .nav_button_top{
+                display: block;
+            }
 }

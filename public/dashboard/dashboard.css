@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  
 }
 .dashboard{
     width: auto;
@@ -22,14 +22,11 @@
     font-family: 'poppins', sans-serif;
 }
 .dashboard_top{
-    display: flex;
-    justify-content: start;
-    align-items: center;
     padding: 0px 10px 20px 10px;
 }
 .top_div1{
-    width: 17%;
-    height: 40px;
+    /* width: 17%;
+    height: 40px; */
     background-color: white;
     border-radius: 5px;
     margin: 5px 10px 5px 10px;
@@ -97,7 +94,7 @@
 }
 .dash_table_header{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1.2fr 2fr 1fr;
     padding: 10px;
     background-color: #d0cfcf;
     font-family: 'popins', sans-serif;
@@ -106,7 +103,7 @@
 }
 .dash_table_details{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1.2fr 2fr 1fr;
     padding: 10px;
     background-color: #ffffff;
     font-family: 'popins', sans-serif;
@@ -125,5 +122,59 @@
     /* border-radius: 50%; */
 }
 
+@media screen and (min-width: 480px){
+.dashboard_top{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}}
 
-
+/* responsiveness*/
+@media screen and (min-width:320px) and (max-width: 480px){
+ .dashboard_top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+    .top_div1{
+       display: flex;
+       align-items: center;
+    }
+    .top_div1 span select{
+        width: 100%;
+    }
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card_details{
+        margin: 10px 0;
+    }
+    .card_details p{
+        margin:0px;
+        text-align: center;
+    }
+    .card_details h1{
+        margin:0px ;
+        padding: 0px;
+    }
+    .table div h1{
+        font-size: medium;
+    }
+    .dash_records{
+        padding: 0px;
+    }
+    .dash_table_header{
+        font-size: 12px;
+        padding-inline-start: 3px;
+    }
+    .dash_table_details{
+        font-size: 10px;
+        padding: 3px;
+    }
+    .image_here{
+        width: 28%;
+    }
+    .image_here img{
+        width: 100%;
+        height: 100%;
+    }
+}

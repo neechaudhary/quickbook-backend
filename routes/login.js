@@ -11,7 +11,7 @@ router.post("/login",  async (req, res) => {
     const password= req.body.login_password;
     console.log(`${email} ${password}`) 
     //check if user already exists
-    const user_collection = await User.findOne({ email: req.body.login_email });
+    const user_collection = await User.findOne({ email: email });
     console.log(user_collection);
     if (!user_collection)
       return res
@@ -19,7 +19,7 @@ router.post("/login",  async (req, res) => {
         .json({ message: "User does not exist. Please register first." });
 
     //check if password is correct
-    const validPassword = await bcrypt.compare(req.body.login_password,user_collection.password);
+    const validPassword = await bcrypt.compare(password,user_collection.password);
     if (!validPassword)
       return res.status(400).json({ message: "Invalid password" });
 

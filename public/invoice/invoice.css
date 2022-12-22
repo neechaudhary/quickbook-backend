@@ -121,7 +121,7 @@ p {
 
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   body {
     padding: 10px;
   }
@@ -151,4 +151,28 @@ p {
   .button {
     display: block;
   }
+} */
+@media screen and (min-width:320px) and (max-width:587px){
+  .invoice_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+  }
+  .full__width img{
+    margin-top: 10px;
+  }
+  .absolute{
+    padding: 0px;
+    top: 50%;
+    left: 40%;
+    width: 70%;
+  }
+  .absolute p{
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width:588px) and (max-width:768px){
+ .full__width img{
+  width:269px;
+ } 
 }

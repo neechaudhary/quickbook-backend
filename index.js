@@ -22,6 +22,7 @@ app.use(express.static(static_path));
 app.get("/login", (req, res) =>{
     return res.sendFile(root('/login/login.html'))
     
+    
 })
 
 app.get("/register", (req, res) =>{
@@ -31,6 +32,7 @@ app.get("/register", (req, res) =>{
 app.get("/dashboard", (req,res)=>{
     return res.sendFile(root('/home/index.html'))
 })
+
 
 
 // app.post("/login", async(req, res) =>{

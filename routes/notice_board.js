@@ -4,13 +4,17 @@ const Notice_board = require('../models/notice_board');
 
 // add notice
 router.post('/notice_post', async (req, res) => {
-
+const title= req.body.notice_title;
+const date= req.body.notice_date;
+const body= req.body.notice_body;
+console.log(`${title}, ${date}, ${body}`)
     const notice_collection= new Notice_board({
-        notice_title: req.body.notice_title,
-        notice_date: req.body.notice_date,
-        notice_body: req.body.notice_content,
-        
+        notice_title: title,
+        notice_date: date,
+        notice_body:body,
     });
+    console.log(notice_collection)
+
     try {
         await notice_collection.save();
 

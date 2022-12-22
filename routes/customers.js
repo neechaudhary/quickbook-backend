@@ -5,7 +5,7 @@ const customer = require('../models/customers');
 // router.get('/', (req, res) => {
 //     res.send('Customer route');
 // });
-
+ 
 
 //add a new customer
 router.post("/",validateCustomer, async(req,res) =>{
