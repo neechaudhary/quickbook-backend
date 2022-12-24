@@ -81,8 +81,8 @@ add_customer.addEventListener('click', (event) => {
             response.data.customers.forEach(function(data)  {
                 store_details += `
                 <li>
-                <div class="customer_details"  >
-                <div onclick="edit_customer(this)" id="${data._id}" id="div_code">${data.cust_code}</div>
+                <div class="customer_details" onclick="edit_customer(this)" id="${data._id}" >
+                <div  id="div_code">${data.cust_code}</div>
                 <div id="div_name_${data._id}">${data.cust_name}</div>
                 <div id="div_telephone_${data._id}">${data.telephone}</div>
                 <div id="div_address_${data._id}">${data.address}</div>
