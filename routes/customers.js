@@ -31,7 +31,7 @@ router.post("/",validateCustomer, async(req,res) =>{
     });
 
     //get all customers
-    router.get("/", async(req,res) =>{
+    router.get("/get-customer", async(req,res) =>{
         try {
             const customers = await customer.find();
             res.status(200).json({customers: customers});

@@ -28,7 +28,7 @@ console.log(`${title}, ${date}, ${body}`)
 // get all notices
 router.get('/all', async (req, res) => {
     try {
-        const notices = await Notice_board.find();
+        const notices = await Notice_board.find({}).limit(8);
         res.status(200).json(notices);
     } catch (error) {
         res.status(500).json({message: 'Error fetching notices'});

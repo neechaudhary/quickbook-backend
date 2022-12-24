@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.cI_main_container{
+    width: 100%;
+    background-color:#ffffff;
+    padding: 40px ;
+}
+.cI_inner_container{
+    background-color: #eae4e4;
+    padding: 20px;
+    
+}
+.CI_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.CI_top .CI_about_cmpny input{
+    display: block;
+    justify-content: start;
+    margin: 10px 0px 10px 10px;
+    border: none;
+    outline: none;
+    height: 20px;
+    padding : 5px;
+}
+.CI_middle{
+    background-color: #f5f4f4;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+.CI_middle .CI_bill_to input{
+    display: block;
+    margin: 10px 0px 10px 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #797979;
+
+
+
+}
+.CI_middle .CI_ship_to input{
+    display: block;
+    margin: 10px 0px 10px 10px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    outline: none;
+
+}
+.ul_record_description{
+    padding: 20px;
+    list-style: none;
+}
+.CI_table_header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #797979;
+    border-left: 1px solid #797979; */
+
+}
+.CI_table_header div{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #797979;
+    padding: 5px;
+    /* border-left: 1px solid #797979;  */
+}
+.CI_table_input{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-content: space-between;
+}
+.CI_table_input input{
+    display: block;
+    
+    padding: 5px;
+    border: none;
+    border-left: 1px solid #797979;
+    border-bottom: 1px solid #797979;
+    outline: none;
+}
+.last_div{
+    display: flex;
+    justify-content: space-between;
+}
+.CI_date div{
+    margin: 5px;
+    display:flex;
+    width:200px;
+    justify-content:space-between;
+}
+.CI_date div input{
+    border: none;
+    padding: 3px;
+}
+.CI_total div{
+    margin: 5px;
+    display:flex;
+    width:200px;
+    justify-content:space-between;
+}
+.CI_total div label{
+    display: flex;
+    justify-content: center;
+    
+}
+.CI_total div span{
+    background-color: white;
+    width: 100%;
+    padding: 5px;
+}
+   

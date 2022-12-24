@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../dashboard/dashboard.css">
     <link rel="stylesheet" href="../notice_board/notice.css">
     <link rel="stylesheet" href="../notice_board/notice_pop.css">
+    <link rel="stylesheet" href="../invoice/create_invoice.css">
 
 
     <title>index</title>
@@ -394,6 +395,7 @@
                     <!---------========payment history start======-->
                     <div class="payment_history">
                         <div>Payment history</div>
+                        <button type="button" onclick="showTab('create_invoice')">Create</button>
                     </div>
                     <div>
                         <ul class="records">
@@ -444,6 +446,128 @@
                     </div>
                     <!---------========payment history end=====-->
                 </div>
+                <!--=============create Invoice start=============== -->
+                <div class="cI_main_container tab" id="create_invoice">
+                    <div class="cI_inner_container">
+                        <div class="CI_top">
+                            <div class="CI_about_cmpny">
+                                <input type="text" name="your company name" id="" placeholder="Your copany name">
+                                <input type="text" name="your company address" id="" placeholder="Your copany address">
+                                <input type="text" name="your contact info" id="" placeholder="Your contact number">
+                            </div>
+                            <div>
+                                <span style="font-size: 20px;">Invoice number</span><br>
+                                <span style="font-size: 20px;">generated number</span>
+                            </div>
+                        </div>
+                        
+                        <hr>
+            
+                        <div class="CI_middle">
+                            <div class="CI_bill_to">
+                                <h3>Bill to</h3>
+                                <input type="text" name="contact_name" placeholder="Contact name">
+                                <input type="text" name="company_name" placeholder="Company name">
+                                <input type="text" name="address" placeholder="Address">
+                                <input type="text" name="phone" placeholder="Phone">
+                                <input type="text" name="email" placeholder="Email">
+            
+                            </div>
+                            <div class="CI_ship_to">
+                                <h3>Ship to</h3>
+                                <input type="text" name="name/dept" placeholder="Name/dept">
+                                <input type="text" name="company name" placeholder="Company name">
+                                <input type="text" name="address" placeholder="Address">
+                                <input type="text" name="phone" placeholder="Phone">
+                                
+                            </div>
+                        </div>
+                        <div class="description">
+                            <ul class="ul_record_description">
+                                <li>
+                                    <div class="CI_table_header">
+                                        <div>Description</div>
+                                        <div>Quantity</div>
+                                        <div>Unit price</div>
+                                        <div>Total</div>
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="CI_table_input">
+                                        <input type="text" name="Description" id=""
+                                        ><input type="number" name="Quantity" id="">
+                                        <input type="number" name="Unit price" id="">
+                                        <input type="number" name="Total" id="">
+                                        
+                                    </div>
+                                </li>
+            
+                                <li>
+                                    <div class="CI_table_input">
+                                        <input type="text" name="Description" id=""
+                                        ><input type="number" name="Quantity" id="">
+                                        <input type="number" name="Unit price" id="">
+                                        <input type="number" name="Total" id="">
+                                        
+                                    </div>
+                                </li>
+            
+            
+                                <li>
+                                    <div class="CI_table_input">
+                                        <input type="text" name="Description" id=""
+                                        ><input type="number" name="Quantity" id="">
+                                        <input type="number" name="Unit price" id="">
+                                        <input type="number" name="Total" id="">
+                                        
+                                    </div>
+                                </li>
+            
+            
+                                <li>
+                                    <div class="CI_table_input">
+                                        <input type="text" name="Description" id=""
+                                        ><input type="number" name="Quantity" id="">
+                                        <input type="number" name="Unit price" id="">
+                                        <input type="number" name="Total" id="">
+                                        
+                                    </div>
+                                </li>
+            
+            
+                                <li>
+                                    <div class="CI_table_input">
+                                        <input type="text" name="Description" id=""
+                                        ><input type="number" name="Quantity" id="">
+                                        <input type="number" name="Unit price" id="">
+                                        <input type="number" name="Total" id="">
+                                        
+                                    </div>
+                                </li>
+            
+                            </ul>
+                            <div class="last_div">
+                                <div class="CI_date">
+                                <div ><label for="Issue_date">Issue date:</label><input type="date" name="" id=""></div>
+                                <div ><label for="Due_date">Due date:</label><input type="date" name="" id=""></div>
+                                
+                            </div>
+                            <div class="CI_total">
+                                <div><label for="Subtotal">Subtotal:</label><span></span></div>
+                                <div><label for="Discount">Discount:</label><span></span></div>
+                                <div><label for="Total">Total:</label><span></span></div>
+                                <div><label for="Total">Amount Due:</label><span></span></div>
+            
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+            
+                </div>
+                <!--=============create Invoice end=============== -->
+
                 <!--======================================invoice end===================================-->
 
 
@@ -454,8 +578,8 @@
                         <h2>Actions</h2>
                         <div class="action_buttons">
                             <button type="button" id="add_customer" onclick="show_add()">Add</button>
-                            <button type="button">Delete</button>
-                            <button class="button">Update</button>
+                            <button type="button" onclick="delete_customer()">Delete</button>
+                            <button class="button" onclick="update_customer()">Update</button>
                         </div>
                         <!----------------------=================add customer start==========================--------------->
                         <div class="add_customer" id="add_customer_body">
@@ -468,115 +592,42 @@
                                         <div>Address</div>
                                         <div>City</div>
                                     </div>
-                                </li> 
+                                </li>
 
                                 <li>
                                     <div class="customer_details">
-                                    <input type="text" disabled placeholder="Auto-generate">
-                                    <input type="text" id="cust_name" placeholder="Name">
-                                    <input type="number"  id="telephone" placeholder="Telephone">
-                                    <input type="text" name="" id="address" placeholder="Address">
-                                    <input type="text" name="" id="city" placeholder="City">
+                                        <input type="text" disabled placeholder="Auto-generate">
+                                        <input type="text" id="cust_name" placeholder="Name">
+                                        <input type="number" id="telephone" placeholder="Telephone">
+                                        <input type="text" name="" id="address" placeholder="Address">
+                                        <input type="text" name="" id="city" placeholder="City">
                                     </div>
                                 </li>
                             </ul>
                             <div class="action_buttons">
                                 <button type="button" id="add_customer_btn" onclick="close_add()">Add</button>
-                                </div>
+                            </div>
                         </div>
                         <!----------------------=================add customer end==========================--------------->
-                        <ul class="customer_record">
-                            <li>
-                                <div class="customer_header">
+                        <ul class="customer_record" id="get_customer_divid">
+                            <!-- <li>
+                                <div class="customer_header" >
                                     <div>Customer code</div>
                                     <div>Customer Name</div>
                                     <div>Telephone</div>
                                     <div>Address</div>
                                     <div>City</div>
                                 </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div >FEF85</div>
-                                    <div >Rishabh Singh</div>
-                                    <div >9817756822</div>
-                                    <div >Netaji subhash place</div>
-                                    <div >New Delhi</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div>GFD87</div>
-                                    <div>Sahil khatri</div>
-                                    <div>6781159755</div>
-                                    <div>Shalimar Bagh</div>
+                            </li> -->
+                            <!-- <li>
+                                <div class="customer_details" >
+                                    <div>FEF85</div>
+                                    <div>Rishabh Singh</div>
+                                    <div>9817756822</div>
+                                    <div>Netaji subhash place</div>
                                     <div>New Delhi</div>
                                 </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div>JN209</div>
-                                    <div>Vicky singh</div>
-                                    <div>970880488</div>
-                                    <div>wazirpur, new delhi</div>
-                                    <div>New Delhi</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div>Customer code</div>
-                                    <div>Customer Name</div>
-                                    <div>Telephone</div>
-                                    <div>Address</div>
-                                    <div>City</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div>Customer code</div>
-                                    <div>Customer Name</div>
-                                    <div>Telephone</div>
-                                    <div>Address</div>
-                                    <div>City</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div>Customer code</div>
-                                    <div>Customer Name</div>
-                                    <div>Telephone</div>
-                                    <div>Address</div>
-                                    <div>City</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div>Customer code</div>
-                                    <div>Customer Name</div>
-                                    <div>Telephone</div>
-                                    <div>Address</div>
-                                    <div>City</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="customer_details">
-                                    <div>Customer code</div>
-                                    <div>Customer Name</div>
-                                    <div>Telephone</div>
-                                    <div>Address</div>
-                                    <div>City</div>
-                                </div>
-                            </li>
-
-
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -625,8 +676,8 @@
                                 </svg>
                                 <span>
                                     <select name="services" id="">
-                                        <option value="Offset printing" selected="true">Select services</option>
-                                        <option value="Offset printing">All</option>
+                                        <option value="Select services" selected="true">Select services</option>
+                                        <option value="All">All</option>
                                         <option value="Offset printing">Offset printing</option>
                                         <option value="Digital printing">Digital printing</option>
                                         <option value="Banner printing">Banner printing</option>
@@ -767,128 +818,26 @@
                                     </div>
                                 </div>
                                 <div class="first_row">
-                                    <div class="first_card">
-                                        <div class="card_details" onclick="get_all()">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
-                                        </div>
+                                    <div class="first_card" id="notice_cards">
 
-                                        <div class="card_details">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
-                                        </div>
+                                       
 
-                                        <div class="card_details">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
+                                    <!-- <div class="card_details">
+                                        <div class="pin">
+                                            <span></span>
                                         </div>
+                                        <div class="card_header">
+                                            <span>Notice title</span>
+                                            <span>date-time</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
+                                            dolore eos.
+                                            Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
+                                        </p>
+                                    </div> -->
 
-                                        <div class="card_details">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
-                                        </div>
-                                    </div>
 
-                                    <div class="first_card">
-                                        <div class="card_details">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
-                                        </div>
-
-                                        <div class="card_details">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
-                                        </div>
-
-                                        <div class="card_details">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
-                                        </div>
-
-                                        <div class="card_details">
-                                            <div class="pin">
-                                                <span></span>
-                                            </div>
-                                            <div class="card_header">
-                                                <span>Notice title</span>
-                                                <span>date-time</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Nobis dignissimos voluptas vel illo magni explicabo sapiente velit natus
-                                                dolore eos.
-                                                Impedit fugiat beatae optio aliquid ex nam amet consectetur est.
-                                            </p>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -902,7 +851,7 @@
                     <div class="notice_p_inner_con">
                         <h2>Create notice</h2>
                         <form action="">
-                        <div class="title_date">
+                            <div class="title_date">
                                 <div class="pop_title">
                                     <label for="title">Title:</label>
                                     <input type="text" id="notice_title" placeholder="Enter your title">
@@ -911,16 +860,16 @@
                                     <label for="date">Date:</label>
                                     <input type="date" id="notice_date" placeholder="yyyy-mm-dd">
                                 </div>
-                        </div>
-                        <div class="body_btn">
-                            <label for="content">Body</label><br>
-                            <textarea id="notice_body" placeholder="Enter your content">
+                            </div>
+                            <div class="body_btn">
+                                <label for="content">Body</label><br>
+                                <textarea id="notice_body" placeholder="Enter your content">
 
                 </textarea><br>
-                            <div>
-                                <button type="submit" id="submit_notice">Add</button>
+                                <div>
+                                    <button type="submit" id="submit_notice">Add</button>
+                                </div>
                             </div>
-                        </div>
                         </form>
                     </div>
 
@@ -934,6 +883,8 @@
 
     </section>
 
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         //showing the email window in the main page
         const id = document.getElementById('id');
@@ -941,6 +892,11 @@
         window.addEventListener('load', () => {
             let tab = document.querySelectorAll('.tab')[5];
             tab.style.display = 'block';
+
+            get_all();
+            get_customer();
+            update_customer();
+            delete_customer();
         })
         function showTab(idname) {
             let emailtab = document.getElementById(idname);
@@ -950,7 +906,7 @@
             });
             emailtab.style.display = 'block';
         }
-        
+
         function toggle_nav() {
             let all_nav_items = document.querySelector('.all_nav_items')
             if (all_nav_items.classList.contains('active')) {
@@ -962,7 +918,7 @@
                 all_nav_items.classList.add('active')
             }
         }
-    // ======================create notice start=============================
+        // ======================create notice start=============================
         var submit_notice = document.getElementById("submit_notice");
         submit_notice.addEventListener('click', (event) => {
             event.preventDefault();
@@ -978,37 +934,71 @@
             }).then(function (response) {
                 console.log(response);
                 alert("Notice created successfully");
-                
-                notice_body='';
-                notice_date='';
-                notice_title='';
-                // document.getElementById('notice_title').value='';
-                // document.getElementById('notice_date').value='';
-                // document.getElementById('notice_body').value='';
+
+                // notice_body = '';
+                // notice_date = '';
+                // notice_title = '';
+                document.getElementById('notice_title').value='';
+                document.getElementById('notice_date').value='';
+                document.getElementById('notice_body').value='';
+               window.location.href = "/dashboard";
+
 
             }).catch(function (error) {
                 console.log(error)
             })
         });
 
-        function get_all(){
+        function get_all() {
             axios.get('http://localhost:3000/api/notice_board/all')
-            .then(function (response) {
-                console.log(response);
-                response.data.forEach(function(data){
-                    console.log(data);//to check if data is broken in rows
+                .then(function (response) {
+                    console.log(response);
+                    var abc = '';
+                    response.data.forEach(function (data) {
+                        abc += `<div class="notice_card_details" onclick="delete_notice(this)" id=${data._id}>
+                                            <div class="pin">
+                                                <span></span>
+                                            </div>
+                                        <i onclick="delete_notice()" class="fa-solid fa-trash notice_delete"></i>
+                                            <div class="card_header">
+                                                <span>${data.notice_title}</span>
+                                                <span>${data.notice_date}</span>
+                                            </div>
+                                            <p>${data.notice_body}
+                                            </p>
+                                        </div>`;
+                        
+                    });
+                    var notice_cards = document.getElementById('notice_cards');
+                    // console.log(abc)
+                    notice_cards.innerHTML=abc;
                 })
-            })
-            .catch(function (error) {
-                console.log(error);
+                .catch(function (error) {
+                    console.log(error);
+                })
+        }
+        function delete_notice($obj){
+            var id= $obj.getAttribute('id')
+            console.log(id)
+
+            axios.delete('http://localhost:3000/api/notice_board/delete/'+id)
+            .then(function(response){
+                console.log(response);
+                alert("Notice board deleted")
+            }).catch(function(error){
+                console.log(error)
             })
         }
+        // function delete_notice(data){
+        //     const id=`${data._id}`
+        //     console.log(id);
+        //     // axios.delete()
+        // }
         // ==================create notice end=============================-
 
 
     </script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js" />
-    <script src="../function.js"></script>
+
     <script src="../customers/customers.js"></script>
 
 </body>

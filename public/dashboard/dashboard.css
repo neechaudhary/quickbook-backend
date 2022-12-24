@@ -42,6 +42,7 @@
 .top_div1 span select{
     border: none;
     outline: none;
+    background-color: #ffffff;
 }
 .top_div1 span select option{
     background-color: aliceblue;

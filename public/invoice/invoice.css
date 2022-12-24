@@ -86,13 +86,28 @@ p {
   list-style-type: none;
 }
 .payment_history{
-    width: 100%;
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+
     margin: 0 auto;
     padding: 20px;
     color:#252525;
     background-color: #ffffff;
     font-size: large;
     
+}
+.payment_history button{
+    background-color: #01B775;
+    color: #fff;
+    width: 200px;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    padding: 11px 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.25s;
+    font-size: 16px;
 }
 .payment_history >div{
     font-weight: 800;
