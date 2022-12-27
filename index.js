@@ -2,6 +2,15 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const path= require("path")
+const cors= require("cors");
+
+const allowedOrigins = ['https://quick.dauqu.host',];
+app.use(cors({ 
+    origin: allowedOrigins,
+    credentials: true,})
+);
+
+
 
 function root(page){
     const static_path = path.join(__dirname, `./public/${page}`);
