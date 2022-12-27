@@ -11,7 +11,7 @@ add_customer.addEventListener('click', (event) => {
             var address= document.getElementById("address").value;
             var city= document.getElementById("city").value;
 
-            axios.post('http://localhost:3000/api/customer/', {
+            axios.post('http://quick.dauqu.host/api/customer/', {
                 cust_code: cust_code,
                 cust_name: cust_name,
                 telephone: telephone,
