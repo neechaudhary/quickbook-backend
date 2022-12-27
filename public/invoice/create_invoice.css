@@ -97,7 +97,7 @@ body{
 .CI_date div{
     margin: 5px;
     display:flex;
-    width:200px;
+    width:230px;
     justify-content:space-between;
 }
 .CI_date div input{
@@ -107,12 +107,18 @@ body{
 .CI_total div{
     margin: 5px;
     display:flex;
-    width:200px;
+    width:260px;
     justify-content:space-between;
 }
+.CI_total div span{
+    
+    width:120px;
+    
+}
 .CI_total div label{
+    width: 230px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     
 }
 .CI_total div span{

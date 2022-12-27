@@ -91,7 +91,6 @@ add_customer.addEventListener('click', (event) => {
                 
                 <div id="_id"></div>
                 </li>
-
                `;
             })
             var get_customer_divid= document.getElementById('get_customer_divid')

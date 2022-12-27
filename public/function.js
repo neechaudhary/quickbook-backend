@@ -10,7 +10,7 @@ async function PostData(event){
     event.preventDefault();//prevent page from reloading
 
    
-    axios.post('http://localhost:3000/api/login/login', {
+    axios.post('https://quick.dauqu.host/api/login/login', {
         login_email: login_email,
         login_password: login_password
     }).then(function(response){

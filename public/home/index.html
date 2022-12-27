@@ -639,7 +639,7 @@
                 <!--======================================dashboard start========================================-->
                 <div class="dashboard tab" id="dashboard">
                     <button class="nav_button_top" onclick="toggle_nav()"
-                        style="display:flex;align-items:center;justify-content:center;height:30px;"><svg width="30px"
+                        style="display:flex;align-items:center;justify-content:center;height:30px; display: none;"><svg width="30px"
                             height="20px" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
@@ -926,7 +926,7 @@
             var notice_date = document.getElementById("notice_date").value;
             var notice_body = document.getElementById("notice_body").value;
 
-            axios.post('http://localhost:3000/api/notice_board/notice_post', {
+            axios.post('https://quick.dauqu.host/api/notice_board/notice_post', {
                 notice_title: notice_title,
                 notice_date: notice_date,
                 notice_body: notice_body,
@@ -950,7 +950,7 @@
         });
 
         function get_all() {
-            axios.get('http://localhost:3000/api/notice_board/all')
+            axios.get('https://quick.dauqu.host/api/notice_board/all')
                 .then(function (response) {
                     console.log(response);
                     var abc = '';
@@ -981,7 +981,7 @@
             var id= $obj.getAttribute('id')
             console.log(id)
 
-            axios.delete('http://localhost:3000/api/notice_board/delete/'+id)
+            axios.delete('https://quick.dauqu.host/api/notice_board/delete/'+id)
             .then(function(response){
                 console.log(response);
                 alert("Notice board deleted")
