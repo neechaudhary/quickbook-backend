@@ -66,7 +66,7 @@ add_customer.addEventListener('click', (event) => {
         
 }
      function get_customer(){
-        axios.get('https://quick.dauqu.host/customer/get-customer')
+        axios.get('https://quick.dauqu.host/api/customer/get-customer')
         .then(function(response){
             console.log(response);
             var store_details= `<li>
