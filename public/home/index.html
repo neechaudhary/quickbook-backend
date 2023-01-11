@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="../notice_board/notice.css">
     <link rel="stylesheet" href="../notice_board/notice_pop.css">
     <link rel="stylesheet" href="../invoice/create_invoice.css">
+    <link rel="stylesheet" href="../balance-sheet/balance_sheet.css">
+    <link rel="stylesheet" href="../cash-flow/cash_flow.css">
+    <link rel="stylesheet" href="../journal/journal.css">
+    <link rel="stylesheet" href="../comprehencive/comprehensive.css">
 
 
     <title>index</title>
@@ -63,17 +67,37 @@
                                 d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                         </svg><a href="#invoice">invoice</a></li>
 
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-gear" viewBox="0 0 16 16">
-                            <path
-                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
-                            <path
-                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
-                        </svg><a href="#setting">Setting</a></li>
 
-                    <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
-   <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
- </svg><a href="#">Password</a></li> -->
+                    <li onclick="showTab('journal_id')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75" />
+                        </svg>
+                        <a href="#journal">Journal Entry</a>
+                    </li>
+
+                    <li onclick="showTab('income_stmnt_id')"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <a href="#income-statement">Income statement</a>
+                    </li>
+
+                    <li onclick="showTab('balance_sheet_id')"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+                        </svg><a href="#balance-sheet">Balance sheet</a></li>
+
+                    <li onclick="showTab('cash_flow_id')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                        </svg>
+                        <a href="#cash-flow">Cash flow</a>
+                    </li>
 
                     <li onclick="showTab('email')" id="email-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor"
@@ -460,9 +484,9 @@
                                 <span style="font-size: 20px;">generated number</span>
                             </div>
                         </div>
-                        
+
                         <hr>
-            
+
                         <div class="CI_middle">
                             <div class="CI_bill_to">
                                 <h3>Bill to</h3>
@@ -471,7 +495,7 @@
                                 <input type="text" name="address" placeholder="Address">
                                 <input type="text" name="phone" placeholder="Phone">
                                 <input type="text" name="email" placeholder="Email">
-            
+
                             </div>
                             <div class="CI_ship_to">
                                 <h3>Ship to</h3>
@@ -479,7 +503,7 @@
                                 <input type="text" name="company name" placeholder="Company name">
                                 <input type="text" name="address" placeholder="Address">
                                 <input type="text" name="phone" placeholder="Phone">
-                                
+
                             </div>
                         </div>
                         <div class="description">
@@ -492,79 +516,80 @@
                                         <div>Total</div>
                                     </div>
                                 </li>
-            
+
                                 <li>
                                     <div class="CI_table_input">
-                                        <input type="text" name="Description" id=""
-                                        ><input type="number" name="Quantity" id="">
+                                        <input type="text" name="Description" id=""><input type="number" name="Quantity"
+                                            id="">
                                         <input type="number" name="Unit price" id="">
                                         <input type="number" name="Total" id="">
-                                        
+
                                     </div>
                                 </li>
-            
+
                                 <li>
                                     <div class="CI_table_input">
-                                        <input type="text" name="Description" id=""
-                                        ><input type="number" name="Quantity" id="">
+                                        <input type="text" name="Description" id=""><input type="number" name="Quantity"
+                                            id="">
                                         <input type="number" name="Unit price" id="">
                                         <input type="number" name="Total" id="">
-                                        
+
                                     </div>
                                 </li>
-            
-            
+
+
                                 <li>
                                     <div class="CI_table_input">
-                                        <input type="text" name="Description" id=""
-                                        ><input type="number" name="Quantity" id="">
+                                        <input type="text" name="Description" id=""><input type="number" name="Quantity"
+                                            id="">
                                         <input type="number" name="Unit price" id="">
                                         <input type="number" name="Total" id="">
-                                        
+
                                     </div>
                                 </li>
-            
-            
+
+
                                 <li>
                                     <div class="CI_table_input">
-                                        <input type="text" name="Description" id=""
-                                        ><input type="number" name="Quantity" id="">
+                                        <input type="text" name="Description" id=""><input type="number" name="Quantity"
+                                            id="">
                                         <input type="number" name="Unit price" id="">
                                         <input type="number" name="Total" id="">
-                                        
+
                                     </div>
                                 </li>
-            
-            
+
+
                                 <li>
                                     <div class="CI_table_input">
-                                        <input type="text" name="Description" id=""
-                                        ><input type="number" name="Quantity" id="">
+                                        <input type="text" name="Description" id=""><input type="number" name="Quantity"
+                                            id="">
                                         <input type="number" name="Unit price" id="">
                                         <input type="number" name="Total" id="">
-                                        
+
                                     </div>
                                 </li>
-            
+
                             </ul>
                             <div class="last_div">
                                 <div class="CI_date">
-                                <div ><label for="Issue_date">Issue date:</label><input type="date" name="" id=""></div>
-                                <div ><label for="Due_date">Due date:</label><input type="date" name="" id=""></div>
-                                
+                                    <div><label for="Issue_date">Issue date:</label><input type="date" name="" id="">
+                                    </div>
+                                    <div><label for="Due_date">Due date:</label><input type="date" name="" id=""></div>
+
+                                </div>
+                                <div class="CI_total">
+                                    <div><label for="Subtotal">Subtotal:</label><span></span></div>
+                                    <div><label for="Discount">Discount:</label><span></span></div>
+                                    <div><label for="Total">Total:</label><span></span></div>
+                                    <div><label for="Total">Amount Due:</label><span></span></div>
+
+                                </div>
                             </div>
-                            <div class="CI_total">
-                                <div><label for="Subtotal">Subtotal:</label><span></span></div>
-                                <div><label for="Discount">Discount:</label><span></span></div>
-                                <div><label for="Total">Total:</label><span></span></div>
-                                <div><label for="Total">Amount Due:</label><span></span></div>
-            
-                            </div>
-                            </div>
-                            
+
                         </div>
                     </div>
-            
+
                 </div>
                 <!--=============create Invoice end=============== -->
 
@@ -639,8 +664,8 @@
                 <!--======================================dashboard start========================================-->
                 <div class="dashboard tab" id="dashboard">
                     <button class="nav_button_top" onclick="toggle_nav()"
-                        style="display:flex;align-items:center;justify-content:center;height:30px; display: none;"><svg width="30px"
-                            height="20px" xmlns="http://www.w3.org/2000/svg"
+                        style="display:flex;align-items:center;justify-content:center;height:30px; display: none;"><svg
+                            width="30px" height="20px" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
                                 d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
@@ -820,9 +845,9 @@
                                 <div class="first_row">
                                     <div class="first_card" id="notice_cards">
 
-                                       
 
-                                    <!-- <div class="card_details">
+
+                                        <!-- <div class="card_details">
                                         <div class="pin">
                                             <span></span>
                                         </div>
@@ -877,6 +902,785 @@
                 <!--==================notice pop end====================-->
                 <!--======================================notice board end========================================-->
 
+                <!--======================================balancesheet start========================================-->
+
+                <div class="bs_container tab" id="balance_sheet_id">
+                    <div class="bs_inner_container">
+                        <ul class="bs_records">
+                            <li>
+                                <div class="bs_header">
+                                    <div>Assets</div>
+                                    <div>This year</div>
+                                    <div>Last year</div>
+                                </div>
+                            </li>
+                            <hr>
+
+                            <li>
+                                <div class="bs_subheading">
+                                    <div>Current assets</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="bs_items">
+                                    <div>Cash and cash equivalents</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="bs_items">
+                                    <div>Accounts receivable</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="bs_items">
+                                    <div>Inventory</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="bs_total">
+                                    <div>Total curent assets</div>
+                                    <div>88,000</div>
+                                    <div>70,000</div>
+                                </div>
+                            </li>
+                            <br>
+
+                            <li>
+                                <div class="bs_subheading">
+                                    <div>Fixed assets</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Plants and machinery</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Less depreciation</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Land</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Intangible assets</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_total">
+                                    <div>Total fixed assets</div>
+                                    <div>88,000</div>
+                                    <div>70,000</div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="bs_all_total">
+                                    <div>Total assets</div>
+                                    <div>88,000</div>
+                                    <div>70,000</div>
+                                </div>
+                            </li>
+                            <br>
+
+                            <!-- ================Liabilities start==================== -->
+                            <li>
+                                <div class="bs_header">
+                                    <div>Liabilities</div>
+                                    <div>This year</div>
+                                    <div>Last year</div>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="bs_subheading">
+                                    <div>Liabilities</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Accounts payable</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Taxes payable</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Long-term bond issued</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_total">
+                                    <div>Total liabilities</div>
+                                    <div>88,000</div>
+                                    <div>70,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_subheading">
+                                    <div>Shareholder's equity</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Common stock</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_items">
+                                    <div>Retained earnings</div>
+                                    <div>$ 10,000</div>
+                                    <div>$ 10,000</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bs_total">
+                                    <div>Total Shareholder's equity</div>
+                                    <div>88,000</div>
+                                    <div>70,000</div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="bs_all_total">
+                                    <div>Total liabilities and Shareholder's equity</div>
+                                    <div>88,000</div>
+                                    <div>70,000</div>
+                                </div>
+                            </li>
+                            <!-- ================Liabilities end==================== -->
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                <!--======================================balancesheet end========================================-->
+
+
+                <!--======================================cashflow start========================================-->
+
+                <div class="cf_container tab" id="cash_flow_id">
+                    <div class="cf_inner_container">
+                        <div class="company_abc">
+                            <p>Company ABC</p>
+                        </div>
+                        <div class="blank_line"></div>
+                        <div>
+                            <ul class="cf_records" id="cash_flow_Id">
+                                <li>
+                                    <div class="cf_header">
+                                        <div>Cash Balance</div>
+                                        <div>January</div>
+                                        <div>February</div>
+                                        <div>March</div>
+                                        <div>April</div>
+                                        <div>May</div>
+                                    </div>
+                                </li>
+
+                                <li  id="cf_row">
+
+                                </li>
+
+                                <!-- <li>
+                                    <div class="cf_row">
+                                        <div>Opening Cash Balance</div>
+                                        <div>$ 1,000</div>
+                                        <div>$ 2,220</div>
+                                        <div>$ 3,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 5,000</div>
+                                    </div>
+                                </li>  -->
+                                <div class="blank_line"></div>
+
+                                <li>
+                                    <div class="cf_header">
+                                        <div>Revenues</div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="cf_row">
+                                        <div>In-store sales</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Online sales</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Other Revenues sales</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Total Revenues</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <div class="blank_line"></div>
+                                <!--=================Gross profit start=========================-->
+                                <li>
+                                    <div class="cf_header">
+                                        <div>Gross profits</div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Cost of goods sold</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Gross profits</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Gross profits margins</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <!--=================Gross profit end=========================-->
+                                <div class="blank_line"></div>
+
+                                <!--=================Expenses start=========================-->
+
+                                <li>
+                                    <div class="cf_header">
+                                        <div>Expenses</div>
+                                    </div>
+                                </li>
+                                <!--==========Fixed cost start================-->
+
+                                <li>
+                                    <div class="cf_total_start">
+                                        <div>Fixed costs</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Rent</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Insurance</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Fees(banking, licences)</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Total fixed costs</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <!--==========Fixed cost end================-->
+                                <!--==========Variable cost start================-->
+
+                                <li>
+                                    <div class="cf_total_start">
+                                        <div>Variable costs</div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Payroll</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Shipping costs</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Utilities</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Equipment and supplies</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Marketing spend</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Other expenses</div>
+                                        <div>$ 5,000</div>
+                                        <div>$ 8,220</div>
+                                        <div>$ 6,000</div>
+                                        <div>$ 4,000</div>
+                                        <div>$ 2,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Total Variable costs</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Total expenses</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <!--==========Variable cost end================-->
+                                <!--=================Expenses end=========================-->
+                                <div class="blank_line"></div>
+                                <!--=================Net profit start=========================-->
+                                <li>
+                                    <div class="cf_header">
+                                        <div>Net profit margins</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total_start">
+                                        <div>EBITDA</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Interest rate</div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_row">
+                                        <div>Taxes</div>
+                                        <div> </div>
+                                        <div> </div>
+                                        <div> </div>
+                                        <div> </div>
+                                        <div> </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Net profit/losses</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Net profit margins</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <!--=================Net profit end=========================-->
+                                <div class="blank_line"></div>
+                                <!--=================closing balance start=========================-->
+                                <li>
+                                    <div class="cf_header">
+                                        <div>Net profit margins</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cf_total">
+                                        <div>Net profit margins</div>
+                                        <div>76%</div>
+                                        <div>82%</div>
+                                        <div>15%</div>
+                                        <div>56%</div>
+                                        <div>56%</div>
+                                    </div>
+                                </li>
+                                <!--=================closing balance end=========================-->
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!--======================================cashflow end========================================-->
+
+                <!--======================================journal start========================================-->
+                <div class="jrnl_container tab" id="journal_id">
+                    <div class="jrnl_inner_container">
+                        <button type="button" id="create_jrnl_btn" onclick="show_journal_entry()">Create</button>
+
+                        <!--=====add journal entry start======-->
+                        <div style="display: none;" id="add_journal_entry">
+                <table style="width: 100%; padding: 10px 10px; ;" class="jrnl_table">
+                    <thead class="jrnl_heading">
+                        <tr>
+                            <th style="width: 19%;">Date</th>
+                            <th style="width: 36%;">Particular</th>
+                            <th style="width: 7%;">L.F</th>
+                            <th style="width: 19%;">Debit</th>
+                            <th style="width: 19%;">Credit</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                         <tr class="jrnl_debit_input" >
+                <td><input style="width: 100%; text-align: center;" type="text" name="" id="jrnl_date" placeholder="Date"></td>
+                <td><input style="width: 100%;" type="text" name="" id="jrnl_from" placeholder="From"></td>
+                <td><input style="width: 100%;" type="text" name="" id="jrnl_lf"></td>
+                <td><input style="width: 100%;" type="number" name="" id="jrnl_debit" placeholder="Debit"></td>
+                <td><input style="width: 100%;" type="text" name="" id="" disabled></td>
+            </tr>
+
+            <tr class="jrnl_debit_input" >
+                <td><input style="width: 100%;" type="text" name="" id="" disabled></td>
+                <td><input style="width: 100%;" type="text" name="" id="jrnl_to" placeholder="To"></td>
+                <td><input style="width: 100%;" type="text" name="" id="jrnl_lf"></td>
+                <td><input style="width: 100%;" type="number" name="" id="" disabled></td>
+                <td><input style="width: 100%;" type="text" name="" id="jrnl_credit"  placeholder="Credit"></td>
+            </tr>
+            <tr class="narration">
+                <td colspan="5"><input style="width: 100%;" type="text" id="jrnl_narration" placeholder="Narration:"></td>
+            </tr>
+                        </tbody>
+                    </table>   
+                    <button type="button" id="close_show_jrnl" onclick="add_jrnl()">Create</button>
+
+                        </div>
+
+                        <!--=====add journal entry end======-->
+
+                        <div class="jrnl_nme_of_business">
+                            <h3 onclick="get_journal()">Journal of Ron and daughters</h3>
+                        </div>
+                        <div>
+                            <table style="width: 100%; padding: 10px 10px; ;" class="jrnl_table" id="journal_body">
+                                <!-- <thead class="jrnl_heading">
+                        <tr>
+                            <th style="width: 19%;">Date</th>
+                            <th style="width: 36%;">Particular</th>
+                            <th style="width: 7%;">L.F</th>
+                            <th style="width: 19%;">Debit</th>
+                            <th style="width: 19%;">Credit</th>
+                        </tr>
+
+                    </thead> -->
+                                <tbody>
+                                    <!-- <tr class="jrnl_debit_input" >
+                            <td><input style="width: 100%; text-align: center;" type="text" name="" id="" placeholder="Date"></td>
+                            <td><input style="width: 100%;" type="text" name="" id="" placeholder="From"></td>
+                            <td><input style="width: 100%;" type="text" name="" id=""></td>
+                            <td><input style="width: 100%;" type="number" name="" id="" placeholder="Debit"></td>
+                            <td><input style="width: 100%;" type="text" name="" id="" disabled></td>
+                        </tr>
+
+                        <tr class="jrnl_debit_input" >
+                            <td><input style="width: 100%;" type="text" name="" id="" disabled></td>
+                            <td><input style="width: 100%;" type="text" name="" id="" placeholder="To"></td>
+                            <td><input style="width: 100%;" type="text" name="" id=""></td>
+                            <td><input style="width: 100%;" type="number" name="" id="" disabled></td>
+                            <td><input style="width: 100%;" type="text" name="" id=""  placeholder="Credit"></td>
+                        </tr>
+                        <tr class="narration">
+                            <td colspan="5"><input style="width: 100%;" type="text" placeholder="Narration:"></td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="balance_frwrd" colspan="3"><div>To balance carried forward</div></td>
+                            <td><input type="number" name="" id=""></td>
+                            <td><input type="number" name="" id=""></td>
+                        </tr> -->
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <!--======================================journal end========================================-->
+
+                <!--======================================comprehensive income start========================================-->
+
+                <div class="cis_container tab" id="income_stmnt_id">
+                    <div class="cis_inner_container">
+                        <div class="company_name">
+                            <h3>Paul's guitar shop, inc</h3>
+                            <h3>Income statement</h3>
+                            <h3>For the year ended <span>December 31,2022</span></h3>
+                        </div>
+                        <div>
+                            <ul class="cis_records">
+                                <li>
+                                    <div class="cis_heading">
+                                        <div>Revenues</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Merchandise sales</div>
+                                        <div>$ 24,800</div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Music lesson income</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items_total">
+                                        <div>Total revenues</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+
+                                <br>
+                                <li>
+                                    <div class="cis_heading">
+                                        <div>Expenses</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Cost of goods sold</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Depreciation expense</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Wage expense</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Rent expense</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Interest expense</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Supplies expense</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Utilities expense</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items_total">
+                                        <div>Total Expenses</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_heading">
+                                        <div>Net income</div>
+                                        <div>$ 24,000</div>
+                                    </div>
+                                </li>
+
+                                <div class="company_name">
+                                    <h3>Paul's guitar shop, inc</h3>
+                                    <h3>Income statement</h3>
+                                    <h3>For the year ended <span>December 31,2022</span></h3>
+                                </div>
+                                <li>
+                                    <div class="cis_heading">
+                                        <div>Net income</div>
+                                        <div>$ 24,000</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_heading">
+                                        <div>Other comprehensive income</div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Unrealised gain on available for securities</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Unrealised loss on held maturity securities</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items">
+                                        <div>Foreign currency adjustments</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cis_items_total">
+                                        <div>Comprehensive income</div>
+                                        <div>$ 24,800</div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <!--======================================comprehensive income start========================================-->
+
 
             </div>
         </div>
@@ -890,7 +1694,7 @@
         const id = document.getElementById('id');
 
         window.addEventListener('load', () => {
-            let tab = document.querySelectorAll('.tab')[5];
+            let tab = document.querySelectorAll('.tab')[6];
             tab.style.display = 'block';
 
             get_all();
@@ -926,7 +1730,7 @@
             var notice_date = document.getElementById("notice_date").value;
             var notice_body = document.getElementById("notice_body").value;
 
-            axios.post('https://quick.dauqu.host/api/notice_board/notice_post', {
+            axios.post('http://localhost:3000/api/notice_board/notice_post', {
                 notice_title: notice_title,
                 notice_date: notice_date,
                 notice_body: notice_body,
@@ -938,10 +1742,10 @@
                 // notice_body = '';
                 // notice_date = '';
                 // notice_title = '';
-                document.getElementById('notice_title').value='';
-                document.getElementById('notice_date').value='';
-                document.getElementById('notice_body').value='';
-               window.location.href = "/dashboard";
+                document.getElementById('notice_title').value = '';
+                document.getElementById('notice_date').value = '';
+                document.getElementById('notice_body').value = '';
+                window.location.href = "/dashboard";
 
 
             }).catch(function (error) {
@@ -950,9 +1754,9 @@
         });
 
         function get_all() {
-            axios.get('https://quick.dauqu.host/api/notice_board/all')
+            axios.get('http://localhost:3000/api/notice_board/all')
                 .then(function (response) {
-                    console.log(response);
+                    // console.log(response);
                     var abc = '';
                     response.data.forEach(function (data) {
                         abc += `<div class="notice_card_details" onclick="delete_notice(this)" id=${data._id}>
@@ -967,27 +1771,27 @@
                                             <p>${data.notice_body}
                                             </p>
                                         </div>`;
-                        
+
                     });
                     var notice_cards = document.getElementById('notice_cards');
                     // console.log(abc)
-                    notice_cards.innerHTML=abc;
+                    notice_cards.innerHTML = abc;
                 })
                 .catch(function (error) {
                     console.log(error);
                 })
         }
-        function delete_notice($obj){
-            var id= $obj.getAttribute('id')
+        function delete_notice($obj) {
+            var id = $obj.getAttribute('id')
             console.log(id)
 
-            axios.delete('https://quick.dauqu.host/api/notice_board/delete/'+id)
-            .then(function(response){
-                console.log(response);
-                alert("Notice board deleted")
-            }).catch(function(error){
-                console.log(error)
-            })
+            axios.delete('http://localhost:3000/api/notice_board/delete/' + id)
+                .then(function (response) {
+                    console.log(response);
+                    alert("Notice board deleted")
+                }).catch(function (error) {
+                    console.log(error)
+                })
         }
         // function delete_notice(data){
         //     const id=`${data._id}`
@@ -1000,6 +1804,8 @@
     </script>
 
     <script src="../customers/customers.js"></script>
+    <script src="../journal/journal.js"></script>
+    <script src="../cash-flow/cash-flow.js"></script>
 
 </body>
 

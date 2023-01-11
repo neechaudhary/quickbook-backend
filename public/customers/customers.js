@@ -11,7 +11,7 @@ add_customer.addEventListener('click', (event) => {
             var address= document.getElementById("address").value;
             var city= document.getElementById("city").value;
 
-            axios.post('https://quick.dauqu.host/api/customer/', {
+            axios.post('http://localhost:3000/api/customer/', {
                 cust_code: cust_code,
                 cust_name: cust_name,
                 telephone: telephone,
@@ -27,7 +27,8 @@ add_customer.addEventListener('click', (event) => {
 });
 
      function show_add(){
-        if(document.getElementById("add_customer_body").style.display == "block"){
+        if(document.getElementById("add_customer_body").style.display == "block")
+        {
             document.getElementById("add_customer_body").style.display = "none";
             document.getElementById("add_customer").innerText = "Add";
             
@@ -57,8 +58,7 @@ add_customer.addEventListener('click', (event) => {
                 alert("customer has been added successfully")
         document.getElementById('add_customer_body').style.display= "none";
         document.getElementById("add_customer").innerText = "Add";
-        
-        document.getElementById("add_customer").style.backgroundColor = "#6ca313";
+        document.getElementById("add_customer").style.backgroundColor= "#6ca313";
             }
 
             
@@ -66,9 +66,9 @@ add_customer.addEventListener('click', (event) => {
         
 }
      function get_customer(){
-        axios.get('https://quick.dauqu.host/api/customer/get-customer')
+        axios.get('http://localhost:3000/api/customer/get-customer')
         .then(function(response){
-            console.log(response);
+            // console.log(response);
             var store_details= `<li>
             <div class="customer_header" >
                 <div>Customer code</div>
@@ -94,7 +94,7 @@ add_customer.addEventListener('click', (event) => {
                `;
             })
             var get_customer_divid= document.getElementById('get_customer_divid')
-            console.log(store_details)
+            // console.log(store_details)
             get_customer_divid.innerHTML=store_details
         }).catch(function(error){
             console.log(error);
@@ -133,7 +133,7 @@ function update_customer(){
     var city= document.getElementById("city").value;
     let id= document.getElementById('_id').value;
     
-    axios.put('https://quick.dauqu.host/api/customer/'+id,{
+    axios.put('http://localhost:3000/api/customer/'+id,{
         
         cust_name: cust_name,
         telephone: telephone,
@@ -153,7 +153,7 @@ function delete_customer(){
     let id= document.getElementById('_id').value;
 
 
-    axios.delete('https://quick.dauqu.host/api/customer/'+id)
+    axios.delete('http://localhost:3000/api/customer/'+id)
     .then(function(response){
         console.log(response);
         alert("customer has been deleted successfully")

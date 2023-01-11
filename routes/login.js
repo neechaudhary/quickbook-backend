@@ -12,7 +12,7 @@ router.post("/login",  async (req, res) => {
     console.log(`${email} ${password}`) 
     //check if user already exists
     const user_collection = await User.findOne({ email: email });
-    console.log(user_collection);
+    
     if (!user_collection)
       return res
         .status(400)

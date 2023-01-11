@@ -63,6 +63,9 @@ app.use('/api/customer', require('./routes/customers'));
 app.use('/api/invoice', require('./routes/invoice'));
 app.use('/api/notice_board', require('./routes/notice_board'));
 app.use('/api/dashboard', require('./routes/dashboard'));
+app.use('/api/journal', require('./routes/journal'));
+app.use('/api/balance_sheet', require('./routes/balance_sheet'));
+app.use('/api/cash_flow', require('./routes/cash_flow'));
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);

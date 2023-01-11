@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+.cis_container{
+    width: auto;
+    padding:20px ;
+    background-color: #ffffff;
+}
+.cis_inner_container{
+    width: auto;
+    /* max-width:900px; */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+   box-shadow: 0px 0px 10px #ccc;
+    background-color: white;
+}
+.cis_records{
+    list-style: none;
+}
+.company_name{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+    background-color: #01B775;
+}
+.cis_heading{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+}
+.cis_heading div:not(:first-child){
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+}
+.cis_items{
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: 1.5fr 1fr;
+    padding:4px 10px;
+}
+.cis_items div{
+    display: flex;
+    justify-content: center;
+}
+.cis_items div:not(:first-child){
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.cis_items_total{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 7px 10px;
+   
+}
+.cis_items_total div{
+    display:flex;
+    justify-content: center;
+}
+.cis_items_total div:nth-child(2){
+    border-top: 1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+
+}
